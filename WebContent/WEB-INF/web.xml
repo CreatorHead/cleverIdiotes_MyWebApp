@@ -8,5 +8,25 @@
     <welcome-file>default.html</welcome-file>
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
+    <welcome-file>Login.html</welcome-file>
   </welcome-file-list>
+  
+  <servlet>
+  	<servlet-name>RandomNameGen</servlet-name>
+  	<servlet-class>com.dev.servlets.RandomNameGeneratorServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>RandomNameGen</servlet-name>
+  	<url-pattern>/getName</url-pattern>
+  </servlet-mapping>
+  
+  
 </web-app>
+
+
+
+
+
+
+
+

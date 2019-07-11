@@ -8,4 +8,5 @@ public interface UserServices {
 	public Boolean updatePassword(Integer userId, String oldPassword, String newPassword);
 	public Boolean deleteUser(Integer userId, String password);
 	public User login(Integer userId, String password);
+	public String getRandomName() throws Exception;
 }
