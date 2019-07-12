@@ -3,6 +3,7 @@ package com.dev.servlets;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.SingleThreadModel;
@@ -22,6 +23,10 @@ public class Serv2 extends HttpServlet {
 		ServletContext ctx = getServletContext();
 		String email = ctx.getInitParameter("email");
 		out.println(email);
+		
+		ServletConfig config = getServletConfig();
+		String msg = config.getInitParameter("msg");
+		out.println(msg);
 	}
 	
 	
