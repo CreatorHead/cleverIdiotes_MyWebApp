@@ -11,6 +11,12 @@
     <welcome-file>Login.html</welcome-file>
   </welcome-file-list>
   
+  <context-param>
+  	<param-name>email</param-name>
+  	<param-value>abc@xyz.com</param-value>
+  </context-param>
+  
+  
   <servlet>
   	<servlet-name>RandomNameGen</servlet-name>
   	<servlet-class>com.dev.servlets.RandomNameGeneratorServlet</servlet-class>
@@ -19,6 +25,11 @@
   	<servlet-name>RandomNameGen</servlet-name>
   	<url-pattern>/getName</url-pattern>
   </servlet-mapping>
+  
+  
+  
+  
+  
   
   
 </web-app>
