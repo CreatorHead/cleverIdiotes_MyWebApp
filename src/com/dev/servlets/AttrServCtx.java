@@ -2,8 +2,8 @@ package com.dev.servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Date;
 
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -12,22 +12,32 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.dev.beans.Dog;
 
-@WebServlet("/date")
-public class MyFirstServlet extends HttpServlet {
+@WebServlet("/attrServCtx")
+public class AttrServCtx extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String firstname = req.getParameter("fname");
-		String lastname = req.getParameter("lname");
+		ServletContext ctx = getServletContext();
+		Dog dog = new Dog();
+		dog.setName("Pinky");
+		dog.setBreed("GS");
+		dog.setColor("Black");
 		
-//		int i = 7/0;
+		ctx.setAttribute("dog", dog);
 		
 		PrintWriter out = resp.getWriter();
-		out.println("<h1>The current Date is: " + new Date() +"</h1>");
-		out.println(firstname + " " + lastname );
-//		resp.setContentType("application/pdf");
-		resp.setContentType("text/html");
-		Dog dog = (Dog) getServletContext().getAttribute("dog");
-		out.println(dog);
+		out.println("Dog is now inside Servlet Context");
 		
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+

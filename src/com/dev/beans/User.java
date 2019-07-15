@@ -6,6 +6,7 @@ public class User {
 	private String firstName;
 	private String lastName;
 	private String password;
+	private Dog dog;
 	
 	public int getUserId() {
 		return userId;
@@ -31,10 +32,18 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	
+	public Dog getDog() {
+		return dog;
+	}
+	public void setDog(Dog dog) {
+		this.dog = dog;
+	}
 	@Override
 	public String toString() {
 		return "User [userId=" + userId + ", firstName=" + firstName + ", lastName=" + lastName + ", password="
-				+ password + "]";
+				+ password + ", dog=" + dog + "]";
 	}
+	
 	
 }
